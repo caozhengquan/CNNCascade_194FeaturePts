@@ -13,4 +13,4 @@ In addition, each level predicts explicit geometric constraints (the position an
 * [opencv 2.4.13](http://opencv.org)
 
 ## Tools
-1.[`calibrate_pts.py`](https://github.com/CongWeilin/CNNCascade_194FeaturePts/blob/master/tools/calibrate_pts.py): This is a tools written in python2.7 in order to calibrate [Helen_dataset](http://www.ifp.illinois.edu/%7Evuongle2/helen/) or other dataset. The users' instruction is printed on the top of the calibrate window.
+1.[`calibrate_pts.py`](https://github.com/CongWeilin/CNNCascade_194FeaturePts/blob/master/tools/calibrate_pts.py): This is a tools to calibrate [Helen_dataset](http://www.ifp.illinois.edu/%7Evuongle2/helen/) or your new image. The user instruction is printed on the top of the calibrate window.
