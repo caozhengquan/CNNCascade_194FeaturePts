@@ -19,16 +19,15 @@ In addition, each level predicts explicit geometric constraints (the position an
 Step 1: Bounding Box Estimation.
 
 According to the image bellow, it is quite convenient to calculate Innor Points Bounding Box and Contour Bounding Box if eyes', nose' and mouth corners' position are known. So I trained a shallow network to calculate the general position of them. You can check them on [DCNN-caffe](https://github.com/CongWeilin/DCNN-caffe) and you can find the [model](https://github.com/CongWeilin/DCNN-caffe/blob/master/train_img/preprocessed_img/F1/model/_iter_1000000.caffemodel).  
-![face radio](https://github.com/CongWeilin/CNNCascade_194FeaturePts/blob/master/face%20radio.jpeg)
+![face radio](https://github.com/CongWeilin/CNNCascade_194FeaturePts/blob/master/introduction/Bounding%20Box.jpeg)
+
 Innor Points Bounding Box : <br>
 x = LE.x - (RE.x - LE.x) / 2 <br>
 y = N.y - [N.y - Max(RE.y, LE.y)] × 2 <br>
 w = (RE.x - LE.x)×2 <br>
 h = [N.y - Min(RE.y, LE.y)] × 3.5 <br>
-![innor](https://github.com/CongWeilin/CNNCascade_194FeaturePts/blob/master/innor%20points.png)
 Counter Points Bounding Box : <br>
 x = LE.x - (RE.x - LE.x) <br>
 y = Max(RE.y, LE.y) - [Max(LM.y,RM.y) - N.y] <br>
 w = (RE.x - LE.x) × 3 <br>
 h = [Max(LM.y,RM.y) - Min(RE.y, LE.y)] * 2 <br>
-![contour](https://github.com/CongWeilin/CNNCascade_194FeaturePts/blob/master/contour%20points.png)
